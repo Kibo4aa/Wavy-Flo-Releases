@@ -13,9 +13,9 @@ even on a computer without a strong graphics card.
 
 ### [⬇ Download the newest Wavy-Flo](https://github.com/Keblackan/Wavy-Flo-Releases/releases/latest)
 
-[What's new in 0.28](https://github.com/Keblackan/Wavy-Flo-Releases/releases/tag/v0.28)
+[What's new in 0.40](https://github.com/Keblackan/Wavy-Flo-Releases/releases/tag/v0.40)
 
-<img src="docs/overview.png" alt="Wavy-Flo with a particle title open" width="100%">
+<img src="docs/overview.png" alt="Wavy-Flo 0.40 in its new look, with the MV-Pop demo open" width="100%">
 
 </div>
 
@@ -23,6 +23,7 @@ even on a computer without a strong graphics card.
 
 ## Contents
 - [Download and install](#download-and-install)
+- [A new look in 0.40](#a-new-look-in-040)
 - [Features](#features)
 - [The workspace, part by part](#the-workspace-part-by-part)
 - [Handy keys](#handy-keys)
@@ -39,12 +40,24 @@ Windows may say *"Windows protected your PC"* the first time: choose **More info
 
 ---
 
+## A new look in 0.40
+- **Timeline:** Eye, Solo and Label columns, with a colour for each layer; Parent, Mode and TrkMat beside every name.
+- **Panels on the right fold into one stack:** Info, Audio, Preview, Effects & Presets, Align, Character and Tracker. Open the ones you need and fold the rest.
+- **Properties** has a tab for each kind of setting down its left side, and **+ Add Additional Transform** for more transforms on top of a layer's own.
+- **Effect controls:** the stopwatch first, every value lined up in one column, a line between parameters, and After Effects-style dropdowns.
+- **Masks:** Add, Subtract or None for each, with Mask Opacity, and Mask Feather and Mask Expansion you can keyframe.
+- **Status bar:** how each frame is drawn (CPU, GPU or both), the preview cache, and what the computer is doing.
+
+See [the workspace, part by part](#the-workspace-part-by-part) below.
+
+---
+
 ## Features
 
 ### Text Animation
 Letters, words or lines fly, spin, scale, fade, blur and change colour on their way in and out. You can stack several Text Animations on one text layer. Each one has its own **In** and **Out** strength, delay, order and range, and each can be switched off, reordered or removed from its heading. Presets give you a start in one click.
 
-<img src="docs/text-animation.png" alt="Text Animation: three stacked animations on one title, letters on their way in" width="100%">
+<img src="docs/text-animation.png" alt="Text Animation: the letters of a title on their way in, its animation open in Properties" width="100%">
 
 ### Graph Editor
 Shape any animation with curves. The graph opens on the keyframes you picked, including those of a second or third Text Animation. Drag the handles to ease in and out.
@@ -52,12 +65,12 @@ Shape any animation with curves. The graph opens on the keyframes you picked, in
 - **Ctrl+click** on the curve adds a keyframe.
 - **Ctrl+click** on an interior keyframe removes it.
 
-<img src="docs/graph-editor.png" alt="Graph Editor showing an eased Text Animation curve" width="100%">
+<img src="docs/graph-editor.png" alt="Graph Editor showing an eased Position curve" width="100%">
 
 ### Effects
-Blur & Sharpen, Color Correction, Stylize, Noise & Distort, Transition, Generate and more, all in the **Effect List**. Effects stack on a layer in the order you set, each with its own on/off eye, and every number can be keyframed. Effects are plug-in packs (`.wfx`), so new ones can be added without a new Wavy-Flo.
+Blur & Sharpen, Color Correction, Stylize, Noise & Distort, Transition, Generate and more, all in **Effects & Presets**. Effects stack on a layer in the order you set, each with its own on/off eye, and every number can be keyframed. Effects are plug-in packs (`.wfx`), so new ones can be added without a new Wavy-Flo.
 
-<img src="docs/effects.png" alt="RGB Split and Linear Wipe on a title over animated clouds" width="100%">
+<img src="docs/effects.png" alt="Wave Warp bending a title, from the Noise &amp; Distort effects" width="100%">
 
 ### 3D layers and lights
 Turn any layer 3D, add a camera, and light the scene with spot, point and ambient lights that cast soft shadows.
@@ -101,15 +114,13 @@ Link one property to another, or to time, with a short expression: a trail of fo
 | # | Part | What it is for |
 |---|------|----------------|
 | 1 | **Menu** | File, Edit, Main, Layer, Tools, Window, Help and Animation. **Reset view** puts every panel back in its place. |
-| 2 | **Tools** | Select (V), Hand, Zoom, Rotate, Anchor Point, Shape (right-click for rectangle, ellipse, polygon or star), Pen, Mask and Text. The green badge shows the current time. |
-| 3 | **Project** | Your Mains (compositions) and the files you import. Double-click a file to put it into the open Main. |
-| 4 | **Effect Setting** | The effects on the selected layer, in order: switch them on and off, reorder, reset or remove them, and change their numbers. |
-| 5 | **Preview** | The picture as it will be rendered. Drag layers here to move them; Fit, zoom, quality (Full/Half/…), Transparency, Grid, Snap and Box sit underneath. |
-| 6 | **Align** | Align layers to the frame or to each other, distribute them, and set the anchor point. |
-| 7 | **Effect List** | Every effect, by category, with a search box. Double-click an effect to add it to the selected layer. |
-| 8 | **Text Setting / Properties** | **Text Setting:** font, size, tracking, leading, fill and strokes. **Properties:** the selected layer's settings by tab: Main Transform, Text Animation, Shape, Mask, Repeater, Lens, Light, Particles, Tracker and Time. |
-| 9 | **Timeline / Graph** | Layers in time. Each row has visibility, number, name, Link (parent), Blend, Matte, 3D and motion blur (MB). Open a layer to see its keyframes. The bar on top holds Fill, Stroke, stroke width and the Graph Editor button. |
-| 10 | **Status bar** | Messages, plus what the computer is doing: CPU, RAM, GPU and how long each frame takes to draw. |
+| 2 | **Tools** | Undo and Redo, then Select (V), Hand, Zoom, Rotate, Anchor Point, Shape (right-click for rectangle, ellipse, polygon or star), Pen, Mask and Text. |
+| 3 | **Project** | Your Mains (compositions) and the files you import, with a search box and a filter by kind. Double-click a file to put it into the open Main. A picture that is missing or cannot be read is marked. |
+| 4 | **Preview** | The picture as it will be rendered. Drag layers here to move them; Fit, zoom, quality (Full/Half/…), Transparency, Grid and Box sit underneath, the time on the right. |
+| 5 | **Panels** | One stack of folding panels: **Info**, **Audio**, **Preview** (playback), **Effects & Presets** (every effect by category, with a search box; double-click one to add it to the selected layer), **Align** (layers to the frame or to each other, and the anchor point), **Character** (font, size, tracking, leading, fill and strokes) and **Tracker**. Click a title to open or fold it. |
+| 6 | **Properties** | The selected layer's settings, by the tabs down its left side: Main Transform (with **+ Add Additional Transform**), Text Animation, Shape, Mask, Repeater, Lens, Light, Particles, Tracker and Time. |
+| 7 | **Timeline / Graph** | Layers in time. Each row has Eye, Solo, Label colour, number, name, Parent, Mode (blend), TrkMat (track matte), sound, 3D and motion blur. Open a layer to see its properties and keyframes. The bar on top holds Fill, Stroke and stroke width for Solid, Shape and Text layers, and the Graph Editor. |
+| 8 | **Status bar** | How the frames are drawn (CPU, GPU or both), the preview cache (in memory or on disk, and Clear), and what the computer is doing: CPU, RAM, GPU and how long each frame takes to draw. |
 
 Every panel can be dragged by its title, floated, or closed. **Window** brings a closed one back.
 
