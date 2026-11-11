@@ -1,0 +1,18 @@
+# Builds
+build*/
+out/
+.vs/
+*.user
+CMakeUserPresets.json
+
+# Packs built on this machine only (see CMakeLists.txt)
+local-packs.cmake
+
+# Editor and backup leftovers
+*.bak
+*.orig
+*.tmp
+*~
+
+# The report channel's webhook (CMakeLists.txt): never in the repository
+report-webhook.txt

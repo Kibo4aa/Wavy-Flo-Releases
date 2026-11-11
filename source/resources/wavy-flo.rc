@@ -1,0 +1,6 @@
+#include <windows.h>
+
+// Named IDI_ICON1: Qt gives its window classes the icon of that name, and the
+// taskbar shows the class icon. Under a number it found none and Windows'
+// blank application icon stood in the taskbar instead of the logo.
+IDI_ICON1 ICON DISCARDABLE "wavy-flo.ico"

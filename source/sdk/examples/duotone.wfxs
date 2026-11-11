@@ -1,0 +1,27 @@
+/* Wavy-Flo effect
+{
+  "id": "Duotone",
+  "name": "Duotone",
+  "category": "Color Correction",
+  "perPixel": true,
+  "parameters": [
+    {"id": "dark", "kind": "color", "label": "Shadows", "default": "#1b1446",
+     "help": "The colour the darkest parts become."},
+    {"id": "light", "kind": "color", "label": "Highlights", "default": "#ffc46b",
+     "help": "The colour the brightest parts become."},
+    {"id": "response", "kind": "curve", "label": "Response",
+     "help": "How brightness travels from one colour to the other."},
+    {"id": "amount", "label": "Amount", "min": 0, "max": 100, "default": 100, "unit": " %",
+     "help": "How much of the duotone is laid over the picture."}
+  ],
+  "inert": "param_amount <= 0.0"
+}
+*/
+// Each pixel's brightness, sent through the Response curve, picks a colour
+// between Shadows and Highlights. Written once: Wavy-Flo runs it on the
+// graphics card, and on every core of the processor where there is none.
+vec4 wavyEffect(vec4 colour, vec2 coord, vec2 size) {
+  float level = param_response(wavyLuma(colour.rgb));
+  vec3 tone = mix(param_dark.rgb, param_light.rgb, level);
+  return vec4(mix(colour.rgb, tone, param_amount / 100.0), colour.a);
+}

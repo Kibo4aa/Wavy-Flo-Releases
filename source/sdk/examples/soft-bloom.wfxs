@@ -1,0 +1,57 @@
+/* Wavy-Flo effect
+{
+  "id": "Soft Bloom",
+  "name": "Soft Bloom",
+  "category": "Stylize",
+  "parameters": [
+    {"id": "threshold", "label": "Threshold", "min": 0, "max": 100, "default": 60, "unit": " %",
+     "help": "How bright a part must be to glow."},
+    {"id": "radius", "label": "Radius", "min": 0, "max": 40, "default": 12, "unit": " px",
+     "help": "How far the glow spreads."},
+    {"id": "intensity", "label": "Intensity", "min": 0, "max": 300, "default": 100, "unit": " %"},
+    {"id": "tint", "kind": "color", "label": "Tint", "default": "#ffffff"},
+    {"id": "glowOnly", "kind": "bool", "label": "Glow Only", "default": false,
+     "help": "Show the glow without the picture under it."}
+  ],
+  "passes": "2",
+  "reach": "param_radius * 1.5",
+  "inert": "param_intensity <= 0.0 || param_radius <= 0.0",
+  "controls": {"tint": "param_intensity <= 0.0 ? WAVY_DIMMED : WAVY_SHOWN"}
+}
+*/
+// Two passes. The first blurs what is above the threshold across, the second
+// blurs that down and lays it over the picture: a gaussian of the radius, cut
+// at three sigma. Between the passes the glow is kept premultiplied -- what a
+// pass returns is what the next one reads, unconverted.
+
+// The part of a pixel bright enough to glow, premultiplied.
+vec4 bright(vec4 c) {
+  float edge = param_threshold / 100.0;
+  float k = smoothstep(edge, edge + 0.15, wavyLuma(c.rgb));
+  return vec4(c.rgb * c.a * k, c.a * k);
+}
+
+vec4 wavyEffect(vec4 colour, vec2 coord, vec2 size) {
+  float sigma = max(param_radius * wavyScale / 3.0, 0.3);
+  int taps = int(ceil(sigma * 3.0));
+  ivec2 here = ivec2(coord);
+  ivec2 along = wavyPass == 0 ? ivec2(1, 0) : ivec2(0, 1);
+  vec4 sum = vec4(0.0);
+  float total = 0.0;
+  for (int i = -taps; i <= taps; ++i) {
+    float w = exp(-float(i * i) / (2.0 * sigma * sigma));
+    vec4 c = wavyPixel(here + along * i);
+    sum += (wavyPass == 0 ? bright(c) : c) * w;
+    total += w;
+  }
+  vec4 glow = sum / total;
+  if (wavyPass == 0) return glow;
+
+  glow *= param_intensity / 100.0;
+  glow.rgb *= param_tint.rgb;
+  vec4 base = param_glowOnly ? vec4(0.0) : wavyPremultiply(wavyOriginal(here));
+  // Screen: light adds without blowing past white.
+  vec3 rgb = base.rgb + glow.rgb - base.rgb * glow.rgb;
+  float alpha = base.a + glow.a - base.a * glow.a;
+  return wavyUnpremultiply(clamp(vec4(rgb, alpha), 0.0, 1.0));
+}
