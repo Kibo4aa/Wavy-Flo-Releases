@@ -28,6 +28,7 @@ even on a computer without a strong graphics card.
 - [The workspace, part by part](#the-workspace-part-by-part)
 - [Handy keys](#handy-keys)
 - [Updates](#updates)
+- [Source code](#source-code)
 
 ## Download and install
 1. Get **Wavy-Flo-…-win64.zip** from [Releases](https://github.com/Kibo4aa/Wavy-Flo-Releases/releases/latest).
@@ -144,4 +145,11 @@ Wavy-Flo looks for a newer version as it opens. Press **Update**: it downloads t
 
 What changed in each version is on the [Releases](https://github.com/Kibo4aa/Wavy-Flo-Releases/releases) page.
 
-<sub>This repository holds only the downloads. Wavy-Flo's source, under the GNU General Public License version 3 or later, is at [Kibo4aa/Wavy-Flo-Source](https://github.com/Kibo4aa/Wavy-Flo-Source).</sub>
+---
+
+## Source code
+Wavy-Flo is open source. Its source is in [source/](source/), under the **GNU General Public License, version 3 or later** ([LICENSE](LICENSE)): you may study it, change it and share it, and whatever is shared built from it carries the same licence, with its source open too. Each release puts its own source there.
+
+- How to build it: [source/README.md](source/README.md)
+- Bug reports, ideas and pull requests: [source/CONTRIBUTING.md](source/CONTRIBUTING.md)
+- The plugin SDK, for writing your own effects, is under the MIT License: [source/sdk/](source/sdk/)
