@@ -7,13 +7,13 @@
 Animated titles, particles, 3D lights, effects and keyframes, previewed as you work,
 even on a computer without a strong graphics card.
 
-[![Latest release](https://img.shields.io/github/v/release/Keblackan/Wavy-Flo-Releases?label=latest&color=00D4A0)](https://github.com/Keblackan/Wavy-Flo-Releases/releases/latest)
-[![Downloads](https://img.shields.io/github/downloads/Keblackan/Wavy-Flo-Releases/total?color=5EA8FF)](https://github.com/Keblackan/Wavy-Flo-Releases/releases)
+[![Latest release](https://img.shields.io/github/v/release/Keblackan/Wavy-Flo-Releases?label=latest&color=00D4A0)](https://github.com/Kibo4aa/Wavy-Flo-Releases/releases/latest)
+[![Downloads](https://img.shields.io/github/downloads/Keblackan/Wavy-Flo-Releases/total?color=5EA8FF)](https://github.com/Kibo4aa/Wavy-Flo-Releases/releases)
 ![Windows 10/11, 64-bit](https://img.shields.io/badge/Windows-10%20%7C%2011%20(64--bit)-F06080)
 
-### [⬇ Download the newest Wavy-Flo](https://github.com/Keblackan/Wavy-Flo-Releases/releases/latest)
+### [⬇ Download the newest Wavy-Flo](https://github.com/Kibo4aa/Wavy-Flo-Releases/releases/latest)
 
-[What's new in 0.40](https://github.com/Keblackan/Wavy-Flo-Releases/releases/tag/v0.40)
+[What's new in 0.40](https://github.com/Kibo4aa/Wavy-Flo-Releases/releases/tag/v0.40)
 
 <img src="docs/overview.png" alt="Wavy-Flo 0.40 in its new look, with the MV-Pop demo open" width="100%">
 
@@ -30,7 +30,7 @@ even on a computer without a strong graphics card.
 - [Updates](#updates)
 
 ## Download and install
-1. Get **Wavy-Flo-…-win64.zip** from [Releases](https://github.com/Keblackan/Wavy-Flo-Releases/releases/latest).
+1. Get **Wavy-Flo-…-win64.zip** from [Releases](https://github.com/Kibo4aa/Wavy-Flo-Releases/releases/latest).
 2. Unpack it anywhere, for example in Documents.
 3. Open **Wavy-Flo.exe**. Nothing is installed and nothing is added to Windows.
 
@@ -142,6 +142,6 @@ Every panel can be dragged by its title, floated, or closed. **Window** brings a
 ## Updates
 Wavy-Flo looks for a newer version as it opens. Press **Update**: it downloads the new version, checks it arrived whole, closes, installs and opens again by itself. Unsaved work is asked about first. **Later** and **Skip This Version** leave everything as it is.
 
-What changed in each version is on the [Releases](https://github.com/Keblackan/Wavy-Flo-Releases/releases) page.
+What changed in each version is on the [Releases](https://github.com/Kibo4aa/Wavy-Flo-Releases/releases) page.
 
-<sub>This repository holds only the downloads. Wavy-Flo's source is not here.</sub>
+<sub>This repository holds only the downloads. Wavy-Flo's source, under the GNU General Public License version 3 or later, is at [Kibo4aa/Wavy-Flo-Source](https://github.com/Kibo4aa/Wavy-Flo-Source).</sub>
