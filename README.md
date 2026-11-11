@@ -7,8 +7,8 @@
 Animated titles, particles, 3D lights, effects and keyframes, previewed as you work,
 even on a computer without a strong graphics card.
 
-[![Latest release](https://img.shields.io/github/v/release/Keblackan/Wavy-Flo-Releases?label=latest&color=00D4A0)](https://github.com/Kibo4aa/Wavy-Flo-Releases/releases/latest)
-[![Downloads](https://img.shields.io/github/downloads/Keblackan/Wavy-Flo-Releases/total?color=5EA8FF)](https://github.com/Kibo4aa/Wavy-Flo-Releases/releases)
+[![Latest release](https://img.shields.io/github/v/release/Kibo4aa/Wavy-Flo-Releases?label=latest&color=00D4A0)](https://github.com/Kibo4aa/Wavy-Flo-Releases/releases/latest)
+[![Downloads](https://img.shields.io/github/downloads/Kibo4aa/Wavy-Flo-Releases/total?color=5EA8FF)](https://github.com/Kibo4aa/Wavy-Flo-Releases/releases)
 ![Windows 10/11, 64-bit](https://img.shields.io/badge/Windows-10%20%7C%2011%20(64--bit)-F06080)
 
 ### [⬇ Download the newest Wavy-Flo](https://github.com/Kibo4aa/Wavy-Flo-Releases/releases/latest)
